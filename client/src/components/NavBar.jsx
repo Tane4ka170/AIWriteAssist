@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import { usePrivy } from "@privy-io/react-auth";
 import { FaPencilAlt } from "react-icons/fa";
@@ -8,14 +7,14 @@ const Navbar = () => {
 
   if (!ready) {
     return (
-      <div className="flex justify-center items-center h-16 bg-gradient-to-r from-blue-600 to-purple-600">
+      <div className="flex justify-center items-center h-16 bg-gradient-to-r from-amber-600 to-blue-600">
         <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-white"></div>
       </div>
     );
   }
 
   return (
-    <nav className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 px-6">
+    <nav className="bg-gradient-to-r from-amber-600 to-blue-600 text-white py-4 px-6">
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center space-x-6">
           <Link
@@ -35,14 +34,14 @@ const Navbar = () => {
           {authenticated ? (
             <button
               onClick={logout}
-              className="bg-white text-blue-600 px-4 py-2 rounded-full font-semibold hover:bg-blue-100 transition duration-300"
+              className="bg-white text-amber-600 px-4 py-2 rounded-full font-semibold hover:bg-amber-100 transition duration-300"
             >
               Logout
             </button>
           ) : (
             <button
               onClick={login}
-              className="bg-white text-blue-600 px-4 py-2 rounded-full font-semibold hover:bg-blue-100 transition duration-300"
+              className="bg-white text-amber-600 px-4 py-2 rounded-full font-semibold hover:bg-amber-100 transition duration-300"
             >
               Login
             </button>
@@ -56,7 +55,7 @@ const Navbar = () => {
 const NavLink = ({ to, children }) => (
   <Link
     to={to}
-    className="text-white hover:text-blue-200 transition duration-300"
+    className="text-white hover:text-amber-200 transition duration-300"
   >
     {children}
   </Link>
